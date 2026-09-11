@@ -11,6 +11,9 @@ Stores tracked (fixed, so the index is comparable day over day):
   shufersal  - שופרסל ONLINE (store 413)
   rami_levy  - רמי לוי תלפיות (store 1; their online file updates rarely)
   carrefour  - קרפור אונליין (store 471)
+  yochananof - יוחננוף (store 1)
+  osher_ad   - אושר עד (store 1)
+  tiv_taam   - טיב טעם (store 2)
 
 Usage:
   python pipeline/fetch_prices.py                 # scrape live (CI)
@@ -29,6 +32,9 @@ CHAINS = {
     "shufersal": {"scraper": "SHUFERSAL", "store_id": 413, "name_he": "שופרסל", "store_he": "שופרסל ONLINE"},
     "rami_levy": {"scraper": "RAMI_LEVY", "store_id": 1, "name_he": "רמי לוי", "store_he": "רמי לוי תלפיות"},
     "carrefour": {"scraper": "YAYNO_BITAN_AND_CARREFOUR", "store_id": 471, "name_he": "Carrefour", "store_he": "קרפור אונליין"},
+    "yochananof": {"scraper": "YOHANANOF", "store_id": 1, "name_he": "יוחננוף", "store_he": "יוחננוף סניף 1"},
+    "osher_ad": {"scraper": "OSHER_AD", "store_id": 1, "name_he": "אושר עד", "store_he": "אושר עד סניף 1"},
+    "tiv_taam": {"scraper": "TIV_TAAM", "store_id": 2, "name_he": "טיב טעם", "store_he": "טיב טעם סניף 2"},
 }
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -154,7 +160,7 @@ def main():
     chain_promos = {k: parse_promos(promo_paths.get(k), barcodes, chain_items[k], today_d) for k in CHAINS}
     print("promos found:", {k: len(v) for k, v in chain_promos.items()})
 
-    snapshot_items, totals = [], {k: 0.0 for k in CHAINS}
+    snapshot_items = []
     for it in basket["items"]:
         bc = it["barcode"]
         prices = {k: round(v[bc][1], 2) for k, v in chain_items.items() if bc in v}
@@ -164,13 +170,20 @@ def main():
         promos = {k: chain_promos[k][bc] for k in CHAINS if bc in chain_promos[k]}
         snapshot_items.append({"id": it["id"], "name_he": it["name_he"], "category": it["category"],
                                "barcode": bc, "prices": prices, "promos": promos})
-        for k, p in prices.items():
-            totals[k] += p
+
+    # comparable basket: only items priced in EVERY chain (barcode-variant gaps
+    # in some chains would otherwise count missing items as free)
+    coverage = {k: sum(1 for it in snapshot_items if k in it["prices"]) for k in CHAINS}
+    common = [it for it in snapshot_items if len(it["prices"]) == len(CHAINS)]
+    totals = {k: round(sum(it["prices"][k] for it in common), 2) for k in CHAINS}
+    print("coverage of basket:", coverage, "| common items:", len(common))
 
     snapshot = {
         "date": today,
         "items": snapshot_items,
-        "totals": {k: round(v, 2) for k, v in totals.items()},
+        "totals": totals,
+        "coverage": coverage,
+        "common_count": len(common),
         "chains": {k: {"name_he": c["name_he"], "store_he": c["store_he"], "source_file": os.path.basename(xml_paths[k])}
                    for k, c in CHAINS.items()},
     }
