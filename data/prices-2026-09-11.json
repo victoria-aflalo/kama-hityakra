@@ -9,7 +9,10 @@
    "prices": {
     "shufersal": 7.35,
     "rami_levy": 7.2,
-    "carrefour": 7.35
+    "carrefour": 7.35,
+    "yochananof": 7.35,
+    "osher_ad": 7.2,
+    "tiv_taam": 7.35
    },
    "promos": {}
   },
@@ -21,7 +24,10 @@
    "prices": {
     "shufersal": 6.7,
     "rami_levy": 6.6,
-    "carrefour": 6.7
+    "carrefour": 6.7,
+    "yochananof": 6.7,
+    "osher_ad": 6.7,
+    "tiv_taam": 6.7
    },
    "promos": {}
   },
@@ -33,7 +39,9 @@
    "prices": {
     "shufersal": 27.9,
     "rami_levy": 26.5,
-    "carrefour": 28.0
+    "carrefour": 28.0,
+    "yochananof": 26.5,
+    "tiv_taam": 27.9
    },
    "promos": {}
   },
@@ -45,7 +53,10 @@
    "prices": {
     "shufersal": 5.87,
     "rami_levy": 5.9,
-    "carrefour": 5.87
+    "carrefour": 5.87,
+    "yochananof": 5.87,
+    "osher_ad": 5.8,
+    "tiv_taam": 5.87
    },
    "promos": {}
   },
@@ -57,7 +68,10 @@
    "prices": {
     "shufersal": 24.9,
     "rami_levy": 19.9,
-    "carrefour": 24.8
+    "carrefour": 24.8,
+    "yochananof": 22.9,
+    "osher_ad": 19.9,
+    "tiv_taam": 24.9
    },
    "promos": {
     "shufersal": {
@@ -77,7 +91,10 @@
    "prices": {
     "shufersal": 17.9,
     "rami_levy": 14.9,
-    "carrefour": 17.5
+    "carrefour": 17.5,
+    "yochananof": 15.9,
+    "osher_ad": 15.2,
+    "tiv_taam": 17.9
    },
    "promos": {
     "shufersal": {
@@ -111,7 +128,9 @@
    "prices": {
     "shufersal": 6.7,
     "rami_levy": 6.4,
-    "carrefour": 6.7
+    "carrefour": 6.7,
+    "yochananof": 6.5,
+    "tiv_taam": 6.8
    },
    "promos": {
     "rami_levy": {
@@ -131,7 +150,10 @@
    "prices": {
     "shufersal": 9.9,
     "rami_levy": 8.9,
-    "carrefour": 9.9
+    "carrefour": 9.9,
+    "yochananof": 9.5,
+    "osher_ad": 8.9,
+    "tiv_taam": 11.9
    },
    "promos": {
     "carrefour": {
@@ -151,7 +173,9 @@
    "prices": {
     "shufersal": 11.9,
     "rami_levy": 10.5,
-    "carrefour": 11.9
+    "carrefour": 11.9,
+    "yochananof": 9.9,
+    "tiv_taam": 11.9
    },
    "promos": {
     "rami_levy": {
@@ -171,7 +195,8 @@
    "prices": {
     "shufersal": 21.36,
     "rami_levy": 21.2,
-    "carrefour": 21.36
+    "carrefour": 21.36,
+    "tiv_taam": 21.36
    },
    "promos": {}
   },
@@ -183,7 +208,10 @@
    "prices": {
     "shufersal": 10.05,
     "rami_levy": 8.3,
-    "carrefour": 9.4
+    "carrefour": 9.4,
+    "yochananof": 8.4,
+    "osher_ad": 8.3,
+    "tiv_taam": 10.0
    },
    "promos": {}
   },
@@ -195,7 +223,9 @@
    "prices": {
     "shufersal": 8.9,
     "rami_levy": 7.9,
-    "carrefour": 8.5
+    "carrefour": 8.5,
+    "yochananof": 7.9,
+    "tiv_taam": 8.9
    },
    "promos": {
     "rami_levy": {
@@ -215,7 +245,9 @@
    "prices": {
     "shufersal": 12.9,
     "rami_levy": 11.9,
-    "carrefour": 12.9
+    "carrefour": 12.9,
+    "yochananof": 11.9,
+    "tiv_taam": 12.9
    },
    "promos": {}
   },
@@ -227,7 +259,10 @@
    "prices": {
     "shufersal": 11.9,
     "rami_levy": 10.9,
-    "carrefour": 12.2
+    "carrefour": 12.2,
+    "yochananof": 11.9,
+    "osher_ad": 9.9,
+    "tiv_taam": 15.5
    },
    "promos": {
     "shufersal": {
@@ -254,7 +289,8 @@
    "prices": {
     "shufersal": 8.9,
     "rami_levy": 8.9,
-    "carrefour": 9.0
+    "carrefour": 9.0,
+    "yochananof": 8.9
    },
    "promos": {
     "rami_levy": {
@@ -281,7 +317,10 @@
    "prices": {
     "shufersal": 7.9,
     "rami_levy": 4.9,
-    "carrefour": 8.0
+    "carrefour": 8.0,
+    "yochananof": 5.5,
+    "osher_ad": 4.9,
+    "tiv_taam": 7.9
    },
    "promos": {
     "shufersal": {
@@ -308,7 +347,10 @@
    "prices": {
     "shufersal": 15.9,
     "rami_levy": 14.9,
-    "carrefour": 16.1
+    "carrefour": 16.1,
+    "yochananof": 14.9,
+    "osher_ad": 14.9,
+    "tiv_taam": 15.9
    },
    "promos": {
     "rami_levy": {
@@ -335,7 +377,8 @@
    "prices": {
     "shufersal": 34.9,
     "rami_levy": 24.9,
-    "carrefour": 33.9
+    "carrefour": 33.9,
+    "yochananof": 26.9
    },
    "promos": {}
   },
@@ -347,7 +390,9 @@
    "prices": {
     "shufersal": 19.9,
     "rami_levy": 18.9,
-    "carrefour": 19.2
+    "carrefour": 19.2,
+    "yochananof": 18.9,
+    "tiv_taam": 19.9
    },
    "promos": {}
   },
@@ -359,7 +404,9 @@
    "prices": {
     "shufersal": 12.5,
     "rami_levy": 9.9,
-    "carrefour": 12.9
+    "carrefour": 12.9,
+    "yochananof": 9.9,
+    "tiv_taam": 12.5
    },
    "promos": {}
   },
@@ -371,7 +418,9 @@
    "prices": {
     "shufersal": 14.5,
     "rami_levy": 12.9,
-    "carrefour": 14.2
+    "carrefour": 14.2,
+    "yochananof": 12.9,
+    "tiv_taam": 14.5
    },
    "promos": {
     "shufersal": {
@@ -398,7 +447,10 @@
    "prices": {
     "shufersal": 16.9,
     "rami_levy": 11.9,
-    "carrefour": 15.9
+    "carrefour": 15.9,
+    "yochananof": 12.9,
+    "osher_ad": 11.9,
+    "tiv_taam": 18.5
    },
    "promos": {}
   },
@@ -410,7 +462,10 @@
    "prices": {
     "shufersal": 11.9,
     "rami_levy": 10.9,
-    "carrefour": 13.3
+    "carrefour": 13.3,
+    "yochananof": 10.9,
+    "osher_ad": 10.9,
+    "tiv_taam": 11.9
    },
    "promos": {
     "carrefour": {
@@ -430,7 +485,9 @@
    "prices": {
     "shufersal": 6.9,
     "rami_levy": 6.4,
-    "carrefour": 6.9
+    "carrefour": 6.9,
+    "yochananof": 6.4,
+    "tiv_taam": 7.9
    },
    "promos": {}
   },
@@ -442,7 +499,9 @@
    "prices": {
     "shufersal": 13.9,
     "rami_levy": 12.9,
-    "carrefour": 15.2
+    "carrefour": 15.2,
+    "osher_ad": 13.9,
+    "tiv_taam": 15.9
    },
    "promos": {
     "rami_levy": {
@@ -462,7 +521,9 @@
    "prices": {
     "shufersal": 16.9,
     "rami_levy": 15.9,
-    "carrefour": 16.9
+    "carrefour": 16.9,
+    "yochananof": 15.9,
+    "tiv_taam": 16.9
    },
    "promos": {}
   },
@@ -474,7 +535,10 @@
    "prices": {
     "shufersal": 25.9,
     "rami_levy": 24.9,
-    "carrefour": 25.9
+    "carrefour": 25.9,
+    "yochananof": 24.9,
+    "osher_ad": 24.9,
+    "tiv_taam": 25.9
    },
    "promos": {
     "carrefour": {
@@ -494,7 +558,9 @@
    "prices": {
     "shufersal": 7.9,
     "rami_levy": 6.9,
-    "carrefour": 7.9
+    "carrefour": 7.9,
+    "yochananof": 7.5,
+    "tiv_taam": 9.9
    },
    "promos": {}
   },
@@ -506,7 +572,10 @@
    "prices": {
     "shufersal": 7.5,
     "rami_levy": 6.5,
-    "carrefour": 7.5
+    "carrefour": 7.5,
+    "yochananof": 6.6,
+    "osher_ad": 6.5,
+    "tiv_taam": 7.5
    },
    "promos": {
     "shufersal": {
@@ -526,7 +595,9 @@
    "prices": {
     "shufersal": 21.5,
     "rami_levy": 16.9,
-    "carrefour": 23.9
+    "carrefour": 23.9,
+    "yochananof": 17.9,
+    "tiv_taam": 21.5
    },
    "promos": {
     "shufersal": {
@@ -572,7 +643,9 @@
    "prices": {
     "shufersal": 9.5,
     "rami_levy": 7.9,
-    "carrefour": 9.5
+    "carrefour": 9.5,
+    "yochananof": 7.9,
+    "osher_ad": 7.9
    },
    "promos": {}
   },
@@ -584,7 +657,10 @@
    "prices": {
     "shufersal": 4.9,
     "rami_levy": 4.0,
-    "carrefour": 4.9
+    "carrefour": 4.9,
+    "yochananof": 3.9,
+    "osher_ad": 3.9,
+    "tiv_taam": 4.9
    },
    "promos": {
     "shufersal": {
@@ -618,7 +694,10 @@
    "prices": {
     "shufersal": 4.9,
     "rami_levy": 3.9,
-    "carrefour": 4.9
+    "carrefour": 4.9,
+    "yochananof": 4.3,
+    "osher_ad": 3.9,
+    "tiv_taam": 4.9
    },
    "promos": {
     "shufersal": {
@@ -652,7 +731,9 @@
    "prices": {
     "shufersal": 16.9,
     "rami_levy": 15.9,
-    "carrefour": 16.9
+    "carrefour": 16.9,
+    "yochananof": 16.9,
+    "tiv_taam": 16.9
    },
    "promos": {}
   },
@@ -664,7 +745,10 @@
    "prices": {
     "shufersal": 20.9,
     "rami_levy": 19.9,
-    "carrefour": 21.9
+    "carrefour": 21.9,
+    "yochananof": 19.9,
+    "osher_ad": 19.9,
+    "tiv_taam": 20.9
    },
    "promos": {
     "rami_levy": {
@@ -718,7 +802,10 @@
    "prices": {
     "shufersal": 33.9,
     "rami_levy": 29.9,
-    "carrefour": 32.9
+    "carrefour": 32.9,
+    "yochananof": 29.9,
+    "osher_ad": 29.9,
+    "tiv_taam": 33.9
    },
    "promos": {
     "shufersal": {
@@ -745,7 +832,8 @@
    "prices": {
     "shufersal": 50.9,
     "rami_levy": 49.9,
-    "carrefour": 50.9
+    "carrefour": 50.9,
+    "tiv_taam": 50.9
    },
    "promos": {
     "rami_levy": {
@@ -765,7 +853,8 @@
    "prices": {
     "shufersal": 16.9,
     "rami_levy": 14.7,
-    "carrefour": 16.2
+    "carrefour": 16.2,
+    "tiv_taam": 18.5
    },
    "promos": {}
   },
@@ -777,7 +866,9 @@
    "prices": {
     "shufersal": 39.9,
     "rami_levy": 28.9,
-    "carrefour": 38.9
+    "carrefour": 38.9,
+    "yochananof": 28.9,
+    "tiv_taam": 39.9
    },
    "promos": {
     "shufersal": {
@@ -811,16 +902,30 @@
    "prices": {
     "shufersal": 12.9,
     "rami_levy": 9.9,
-    "carrefour": 11.9
+    "carrefour": 11.9,
+    "yochananof": 9.9,
+    "tiv_taam": 12.9
    },
    "promos": {}
   }
  ],
  "totals": {
-  "shufersal": 671.53,
-  "rami_levy": 588.2,
-  "carrefour": 671.28
+  "shufersal": 245.17,
+  "rami_levy": 214.3,
+  "carrefour": 245.02,
+  "yochananof": 222.22,
+  "osher_ad": 213.5,
+  "tiv_taam": 252.32
  },
+ "coverage": {
+  "shufersal": 42,
+  "rami_levy": 42,
+  "carrefour": 42,
+  "yochananof": 36,
+  "osher_ad": 20,
+  "tiv_taam": 37
+ },
+ "common_count": 18,
  "chains": {
   "shufersal": {
    "name_he": "שופרסל",
@@ -836,6 +941,21 @@
    "name_he": "Carrefour",
    "store_he": "קרפור אונליין",
    "source_file": "PriceFull7290055700007-001-471-20260911-051011.xml"
+  },
+  "yochananof": {
+   "name_he": "יוחננוף",
+   "store_he": "יוחננוף סניף 1",
+   "source_file": "PriceFull7290803800003-000-001-20260911-004031.xml"
+  },
+  "osher_ad": {
+   "name_he": "אושר עד",
+   "store_he": "אושר עד סניף 1",
+   "source_file": "PriceFull7290103152017-001-001-20260911-080008.xml"
+  },
+  "tiv_taam": {
+   "name_he": "טיב טעם",
+   "store_he": "טיב טעם סניף 2",
+   "source_file": "PriceFull7290873255550-000-002-20260911-004004.xml"
   }
  }
 }
