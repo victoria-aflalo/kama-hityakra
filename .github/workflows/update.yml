@@ -1,0 +1,27 @@
+name: Update supermarket prices
+
+on:
+  schedule:
+    # 03:30 UTC = 05:30/06:30 Israel time, after the chains publish overnight files
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r pipeline/requirements.txt
+      - name: Fetch prices and rebuild data
+        run: python pipeline/fetch_prices.py
+      - name: Commit data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): daily price update"
+          file_pattern: "data/ docs/data/"

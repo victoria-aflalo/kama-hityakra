@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כמה התייקרה המכולת שלך?</title>
+<meta name="description" content="מדד מחירי סל המכולת ברשתות הגדולות בישראל, מדי יום, על בסיס נתוני חוק שקיפות המחירים. בונים סל אישי ומשווים.">
+<meta property="og:title" content="כמה התייקרה המכולת שלך?">
+<meta property="og:description" content="סל מכולת זהה בשופרסל, רמי לוי ו-Carrefour - מי יקר וכמה התייקר?">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="hero">
+  <h1>כמה התייקרה המכולת שלך? 🛒</h1>
+  <p class="sub">סל זהה של 42 מוצרי יסוד, מחירים אמיתיים מהיום, מתוך קובצי חוק שקיפות המחירים</p>
+  <div class="totals" id="totals"></div>
+  <p class="updated" id="updated"></p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>מדד הסל לאורך זמן</h2>
+    <p class="hint">מחיר הסל המלא בכל רשת. הבסיס (100) = היום הראשון למדידה.</p>
+    <div class="chart-wrap"><canvas id="indexChart"></canvas></div>
+  </section>
+
+  <section class="card">
+    <h2>המחשבון: בנו את הסל שלכם</h2>
+    <p class="hint">סמנו כמויות ותראו כמה הסל שלכם עולה בכל רשת - וכמה הוא התייקר מאז תחילת המדידה.</p>
+    <div id="calcControls" class="calc-controls">
+      <button id="selectAll">סל מלא</button>
+      <button id="selectNone">נקה הכל</button>
+    </div>
+    <div id="calcList"></div>
+    <div class="results" id="results"></div>
+  </section>
+</main>
+
+<footer>
+  <p>הנתונים: קובצי המחירים הרשמיים שרשתות השיווק מפרסמות מכוח <b>חוק שקיפות המחירים</b>. ההשוואה על מוצרים זהים (אותו ברקוד) בסניפי האונליין של הרשתות.</p>
+  <p>נבנה על ידי <b>ויקטוריה אפללו</b> · קוד פתוח</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

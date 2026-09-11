@@ -1,0 +1,46 @@
+* { box-sizing: border-box; margin: 0; }
+:root {
+  --bg: #0f1420; --card: #1a2132; --line: #2a3350;
+  --text: #eef1f8; --muted: #9aa4c0; --accent: #ffd166;
+  --shufersal: #ef476f; --rami: #06d6a0; --carrefour: #4d9de0;
+}
+body { font-family: 'Segoe UI', system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.hero { text-align: center; padding: 2.5rem 1rem 1.5rem; background: linear-gradient(180deg, #182038, var(--bg)); }
+.hero h1 { font-size: 2rem; margin-bottom: .4rem; }
+.sub { color: var(--muted); max-width: 34rem; margin: 0 auto 1.2rem; }
+.totals { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+.total-chip { background: var(--card); border: 1px solid var(--line); border-radius: 1rem; padding: .8rem 1.2rem; min-width: 9rem; }
+.total-chip .chain { font-size: .9rem; color: var(--muted); }
+.total-chip .price { font-size: 1.6rem; font-weight: 700; }
+.total-chip.cheapest { border-color: var(--rami); box-shadow: 0 0 18px rgba(6,214,160,.25); }
+.total-chip .badge { display: inline-block; font-size: .75rem; background: var(--rami); color: #04231a; border-radius: 1rem; padding: 0 .5rem; margin-right: .3rem; }
+.updated { margin-top: 1rem; font-size: .8rem; color: var(--muted); }
+main { max-width: 46rem; margin: 0 auto; padding: 0 1rem 2rem; display: grid; gap: 1.2rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 1.2rem; padding: 1.2rem; }
+.card h2 { font-size: 1.2rem; margin-bottom: .3rem; }
+.hint { color: var(--muted); font-size: .85rem; margin-bottom: 1rem; }
+.chart-wrap { position: relative; height: 260px; }
+.calc-controls { display: flex; gap: .6rem; margin-bottom: .8rem; }
+.calc-controls button { background: var(--line); color: var(--text); border: 0; border-radius: .6rem; padding: .45rem 1rem; font-size: .9rem; cursor: pointer; }
+.calc-controls button:hover { filter: brightness(1.2); }
+.cat { margin: 1rem 0 .3rem; font-weight: 700; color: var(--accent); font-size: .95rem; }
+.item-row { display: flex; align-items: center; gap: .6rem; padding: .35rem 0; border-bottom: 1px solid var(--line); }
+.item-row .name { flex: 1; font-size: .92rem; }
+.item-row .price { color: var(--muted); font-size: .8rem; min-width: 4rem; text-align: left; }
+.qty { display: flex; align-items: center; gap: .35rem; }
+.qty button { width: 1.9rem; height: 1.9rem; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--text); font-size: 1.1rem; cursor: pointer; }
+.qty button:hover { background: var(--line); }
+.qty .n { min-width: 1.4rem; text-align: center; font-weight: 600; }
+.results { margin-top: 1.2rem; display: grid; gap: .5rem; }
+.result-row { display: flex; justify-content: space-between; align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: .8rem; padding: .6rem 1rem; }
+.result-row .chain { font-weight: 600; }
+.result-row.cheapest { border-color: var(--rami); }
+.result-row .price { font-size: 1.2rem; font-weight: 700; }
+.result-row .save { color: var(--rami); font-size: .8rem; }
+.personal-inflation { text-align: center; padding: .8rem; border-radius: .8rem; background: var(--bg); border: 1px solid var(--line); }
+.personal-inflation b { color: var(--accent); font-size: 1.3rem; }
+footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 1.5rem 1rem 2.5rem; max-width: 40rem; margin: 0 auto; }
+@media (max-width: 480px) { .hero h1 { font-size: 1.6rem; } .total-chip .price { font-size: 1.3rem; } }
+/* Chart.js RTL headless overflow guard */
+html, body { overflow-x: hidden; }
+.chart-wrap canvas { max-width: 100% !important; }

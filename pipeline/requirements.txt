@@ -1,0 +1,1 @@
+il-supermarket-scraper>=1.0.12
