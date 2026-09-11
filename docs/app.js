@@ -1,4 +1,4 @@
-const CHAIN_COLORS = { shufersal: '#d6455b', rami_levy: '#1a9e6f', carrefour: '#2f6fd0' };
+const CHAIN_COLORS = { shufersal: '#d6455b', rami_levy: '#1a9e6f', carrefour: '#2f6fd0', yochananof: '#e67e22', osher_ad: '#8e44ad', tiv_taam: '#795548' };
 const fmt = n => '₪' + n.toLocaleString('he-IL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 let DATA = null;
@@ -22,13 +22,17 @@ function chainKeys() { return Object.keys(DATA.latest.totals); }
 
 function renderTotals() {
   const t = DATA.latest.totals;
+  const cov = DATA.latest.coverage || {};
+  const common = DATA.latest.common_count;
   const cheapest = chainKeys().sort((a, b) => t[a] - t[b])[0];
   const el = document.getElementById('totals');
   el.innerHTML = chainKeys().map(k => `
     <div class="total-chip ${k === cheapest ? 'cheapest' : ''}">
       <div class="chain">${DATA.latest.chains[k].name_he}${k === cheapest ? ' <span class="badge">הכי זול</span>' : ''}</div>
       <div class="price" style="color:${CHAIN_COLORS[k]}">${fmt(t[k])}</div>
-    </div>`).join('');
+      ${cov[k] != null ? `<div class="cov">כיסוי: ${cov[k]}/${DATA.latest.items.length} מוצרים</div>` : ''}
+    </div>`).join('') +
+    (common != null && common < DATA.latest.items.length ? `<p class="hint">ההשוואה על ${common} מוצרים שזמינים בכל 6 הרשתות (ברקוד זהה). רשתות עם כיסוי חלקי מוכרות חלק מהמוצרים תחת ברקוד אחר.</p>` : '');
   const d = new Date(DATA.generated_at);
   document.getElementById('updated').textContent = 'עודכן לאחרונה: ' + d.toLocaleDateString('he-IL');
 }
@@ -153,11 +157,17 @@ function renderResults() {
   const anyQty = Object.values(qty).some(q => q > 0);
   if (!anyQty) { el.innerHTML = '<p class="hint">בחרו לפחות מוצר אחד 🙂</p>'; return; }
 
+  const active = DATA.latest.items.filter(it => qty[it.id] > 0);
+  const full = keys.filter(k => active.every(it => it.prices[k] != null));
+  const eligible = full.length ? full : keys;
+  const bestK = eligible.sort((a, b) => totals.find(t => t[0] === a)[1] - totals.find(t => t[0] === b)[1])[0];
+  const mostEl = Math.max(...eligible.map(k => totals.find(t => t[0] === k)[1]));
   el.innerHTML = totals.map(([k, v, shelf, applied]) => `
-    <div class="result-row ${k === totals[0][0] ? 'cheapest' : ''}">
+    <div class="result-row ${k === bestK ? 'cheapest' : ''}">
       <span class="chain" style="color:${CHAIN_COLORS[k]}">${DATA.latest.chains[k].name_he}
         ${applied ? `<span class="promos-note">כולל ${applied} מבצעים</span>` : ''}
-        ${k === totals[0][0] ? `<span class="save">חוסכים ${fmt(most - v)} לעומת היקר ביותר</span>` : ''}
+        ${!full.includes(k) ? `<span class="promos-note">חסרים ${active.filter(it => it.prices[k] == null).length} מוצרים - הסכום חלקי</span>` : ''}
+        ${k === bestK && eligible.length > 1 ? `<span class="save">חוסכים ${fmt(mostEl - v)} לעומת היקר ביותר</span>` : ''}
       </span>
       <span class="prices">
         ${applied ? `<span class="shelf">${fmt(shelf)}</span>` : ''}
