@@ -1,4 +1,4 @@
-const CHAIN_COLORS = { shufersal: '#ef476f', rami_levy: '#06d6a0', carrefour: '#4d9de0' };
+const CHAIN_COLORS = { shufersal: '#d6455b', rami_levy: '#1a9e6f', carrefour: '#2f6fd0' };
 const fmt = n => '₪' + n.toLocaleString('he-IL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 let DATA = null;
@@ -48,11 +48,11 @@ function renderChart() {
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { labels: { color: '#eef1f8' } },
+      plugins: { legend: { labels: { color: '#16202e' } },
         tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y} (${fmt(snaps[c.dataIndex].totals[keys[c.datasetIndex]])})` } } },
       scales: {
-        x: { ticks: { color: '#9aa4c0' }, grid: { color: '#2a3350' } },
-        y: { ticks: { color: '#9aa4c0' }, grid: { color: '#2a3350' }, title: { display: true, text: 'מדד (בסיס = 100)', color: '#9aa4c0' } },
+        x: { ticks: { color: '#6a7383' }, grid: { color: '#e4e7ee' } },
+        y: { ticks: { color: '#6a7383' }, grid: { color: '#e4e7ee' }, title: { display: true, text: 'מדד (בסיס = 100)', color: '#6a7383' } },
       },
     },
   });
@@ -71,6 +71,7 @@ function renderCalc() {
         <span class="qty" data-id="${it.id}">
           <button data-act="-">−</button><span class="n">${qty[it.id]}</span><button data-act="+">+</button>
         </span>
+        ${promoChips(it)}
       </div>`).join('')}`).join('');
   el.querySelectorAll('.qty button').forEach(b => b.onclick = () => {
     const id = b.parentElement.dataset.id;
@@ -90,10 +91,36 @@ function basketTotal(items, chain) {
   return items.reduce((s, it) => s + (it.prices[chain] || 0) * qty[it.id], 0);
 }
 
+// effective total: promo unit price applies only when qty >= promo min_qty
+function effectiveTotal(items, chain) {
+  let total = 0, applied = 0;
+  items.forEach(it => {
+    const q = qty[it.id];
+    if (!q) return;
+    const p = it.promos && it.promos[chain];
+    if (p && q >= p.min_qty && p.price_eff < it.prices[chain]) { total += p.price_eff * q; applied++; }
+    else total += (it.prices[chain] || 0) * q;
+  });
+  return { total, applied };
+}
+
+function promoChips(it) {
+  if (!it.promos || !Object.keys(it.promos).length) return '';
+  const chips = Object.entries(it.promos).map(([k, p]) => {
+    const mq = p.min_qty > 1 ? `בקניית ${p.min_qty} יח׳` : '';
+    const club = p.club_only ? ' · מועדון' : '';
+    return `<span class="promo-chip"><span class="dot" style="background:${CHAIN_COLORS[k]}"></span>${DATA.latest.chains[k].name_he}: ${fmt(p.price_eff)} ${mq}${club}</span>`;
+  }).join('');
+  return `<span class="promo-chips">${chips}</span>`;
+}
+
 function renderResults() {
   const keys = chainKeys();
   const latest = DATA.latest.items;
-  const totals = keys.map(k => [k, basketTotal(latest, k)]).sort((a, b) => a[1] - b[1]);
+  const totals = keys.map(k => {
+    const eff = effectiveTotal(latest, k);
+    return [k, eff.total, basketTotal(latest, k), eff.applied];
+  }).sort((a, b) => a[1] - b[1]);
   const most = totals[totals.length - 1][1];
 
   // personal inflation: same quantities on first snapshot's prices
@@ -107,11 +134,16 @@ function renderResults() {
   const anyQty = Object.values(qty).some(q => q > 0);
   if (!anyQty) { el.innerHTML = '<p class="hint">בחרו לפחות מוצר אחד 🙂</p>'; return; }
 
-  el.innerHTML = totals.map(([k, v]) => `
+  el.innerHTML = totals.map(([k, v, shelf, applied]) => `
     <div class="result-row ${k === totals[0][0] ? 'cheapest' : ''}">
-      <span class="chain" style="color:${CHAIN_COLORS[k]}">${DATA.latest.chains[k].name_he}</span>
-      <span class="price">${fmt(v)}</span>
-      ${k === totals[0][0] ? `<span class="save">חוסכים ${fmt(most - v)} לעומת היקר ביותר</span>` : ''}
+      <span class="chain" style="color:${CHAIN_COLORS[k]}">${DATA.latest.chains[k].name_he}
+        ${applied ? `<span class="promos-note">כולל ${applied} מבצעים</span>` : ''}
+        ${k === totals[0][0] ? `<span class="save">חוסכים ${fmt(most - v)} לעומת היקר ביותר</span>` : ''}
+      </span>
+      <span class="prices">
+        ${applied ? `<span class="shelf">${fmt(shelf)}</span>` : ''}
+        <span class="price">${fmt(v)}</span>
+      </span>
     </div>`).join('') +
     `<div class="personal-inflation" id="inflBox"><span class="hint">אינפלציה אישית: תתחיל לצבור היסטוריה מהימים הקרובים 📈</span></div>`;
   renderPersonalInflation();

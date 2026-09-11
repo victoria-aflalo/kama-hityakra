@@ -10,7 +10,8 @@
     "shufersal": 7.35,
     "rami_levy": 7.2,
     "carrefour": 7.35
-   }
+   },
+   "promos": {}
   },
   {
    "id": "cottage",
@@ -21,7 +22,8 @@
     "shufersal": 6.7,
     "rami_levy": 6.6,
     "carrefour": 6.7
-   }
+   },
+   "promos": {}
   },
   {
    "id": "yellow_cheese",
@@ -32,7 +34,8 @@
     "shufersal": 27.9,
     "rami_levy": 26.5,
     "carrefour": 28.0
-   }
+   },
+   "promos": {}
   },
   {
    "id": "white_cheese",
@@ -43,7 +46,8 @@
     "shufersal": 5.87,
     "rami_levy": 5.9,
     "carrefour": 5.87
-   }
+   },
+   "promos": {}
   },
   {
    "id": "mozzarella",
@@ -54,6 +58,15 @@
     "shufersal": 24.9,
     "rami_levy": 19.9,
     "carrefour": 24.8
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 23.9,
+     "min_qty": 1.0,
+     "desc": "23.90 גבינה צהובה 200 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    }
    }
   },
   {
@@ -65,6 +78,29 @@
     "shufersal": 17.9,
     "rami_levy": 14.9,
     "carrefour": 17.5
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 13.0,
+     "min_qty": 2.0,
+     "desc": "2ב26 גבינת שמנת 5%/16%/30% 200 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 12.5,
+     "min_qty": 2.0,
+     "desc": "גבינת שמנת ניו יורק 200גרם 2ב25",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 13.9,
+     "min_qty": 1.0,
+     "desc": "גבינה שמנת ניו יורק גד 200 גר",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -76,6 +112,15 @@
     "shufersal": 6.7,
     "rami_levy": 6.4,
     "carrefour": 6.7
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 4.5,
+     "min_qty": 2.0,
+     "desc": "מעדן יופלה גוו 200גרם 2ב9",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -87,6 +132,15 @@
     "shufersal": 9.9,
     "rami_levy": 8.9,
     "carrefour": 9.9
+   },
+   "promos": {
+    "carrefour": {
+     "price_eff": 7.9,
+     "min_qty": 1.0,
+     "desc": "*חמאה 200 גרם מהדרין",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -98,6 +152,15 @@
     "shufersal": 11.9,
     "rami_levy": 10.5,
     "carrefour": 11.9
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "משקאות סויה אלטרנטיב 1 ליטר ב9.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -109,7 +172,8 @@
     "shufersal": 21.36,
     "rami_levy": 21.2,
     "carrefour": 21.36
-   }
+   },
+   "promos": {}
   },
   {
    "id": "bread",
@@ -120,7 +184,8 @@
     "shufersal": 10.05,
     "rami_levy": 8.3,
     "carrefour": 9.4
-   }
+   },
+   "promos": {}
   },
   {
    "id": "flour",
@@ -131,6 +196,15 @@
     "shufersal": 8.9,
     "rami_levy": 7.9,
     "carrefour": 8.5
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 7.0,
+     "min_qty": 2.0,
+     "desc": "מגוון קמחים 1 ק ג סוגת 2ב14",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -142,7 +216,8 @@
     "shufersal": 12.9,
     "rami_levy": 11.9,
     "carrefour": 12.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "rice",
@@ -153,6 +228,22 @@
     "shufersal": 11.9,
     "rami_levy": 10.9,
     "carrefour": 12.2
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "9.90 אורז בסמטי 1 ק\"ג-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "אורז בסמטי 1 ק ג שקדיה/אלפנט ב9.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -164,6 +255,22 @@
     "shufersal": 8.9,
     "rami_levy": 8.9,
     "carrefour": 9.0
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 4.9,
+     "min_qty": 1.0,
+     "desc": "פסטה ליגורי 500 גרם ב4.90 מעל 75 מו3",
+     "club_only": false,
+     "min_spend": null
+    },
+    "carrefour": {
+     "price_eff": 7.5,
+     "min_qty": 2.0,
+     "desc": "פסטה 500 גרם LIGUORI",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -175,6 +282,22 @@
     "shufersal": 7.9,
     "rami_levy": 4.9,
     "carrefour": 8.0
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 6.0,
+     "min_qty": 2.0,
+     "desc": "2ב12 פתיתים אפויים 400-500 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "carrefour": {
+     "price_eff": 6.45,
+     "min_qty": 2.0,
+     "desc": "פתיתים אפויים אסם 400-600 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -186,6 +309,22 @@
     "shufersal": 15.9,
     "rami_levy": 14.9,
     "carrefour": 16.1
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "שמן קנולה 1 ליטר עץ הזית ב9.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "*שמן קנולה בריאות מהטבע  ליטר",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -197,7 +336,8 @@
     "shufersal": 34.9,
     "rami_levy": 24.9,
     "carrefour": 33.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "tahini",
@@ -208,7 +348,8 @@
     "shufersal": 19.9,
     "rami_levy": 18.9,
     "carrefour": 19.2
-   }
+   },
+   "promos": {}
   },
   {
    "id": "hummus",
@@ -219,7 +360,8 @@
     "shufersal": 12.5,
     "rami_levy": 9.9,
     "carrefour": 12.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "tuna",
@@ -230,6 +372,22 @@
     "shufersal": 14.5,
     "rami_levy": 12.9,
     "carrefour": 14.2
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 12.0,
+     "min_qty": 2.0,
+     "desc": "2ב24 טונה בשמן צמחי/קנולה 80*3 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "carrefour": {
+     "price_eff": 10.0,
+     "min_qty": 1.0,
+     "desc": "שלישיית פילטונה קנולה/שמן צמחי",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -241,7 +399,8 @@
     "shufersal": 16.9,
     "rami_levy": 11.9,
     "carrefour": 15.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "mayo",
@@ -252,6 +411,15 @@
     "shufersal": 11.9,
     "rami_levy": 10.9,
     "carrefour": 13.3
+   },
+   "promos": {
+    "carrefour": {
+     "price_eff": 8.5,
+     "min_qty": 1.0,
+     "desc": "*מיונז צנצנת 500 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -263,7 +431,8 @@
     "shufersal": 6.9,
     "rami_levy": 6.4,
     "carrefour": 6.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "peanut_butter",
@@ -274,6 +443,15 @@
     "shufersal": 13.9,
     "rami_levy": 12.9,
     "carrefour": 15.2
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 9.9,
+     "min_qty": 1.0,
+     "desc": "חמאת בוטנים/עם שברי בוטנים שקדיה 9.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -285,7 +463,8 @@
     "shufersal": 16.9,
     "rami_levy": 15.9,
     "carrefour": 16.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "coffee",
@@ -296,6 +475,15 @@
     "shufersal": 25.9,
     "rami_levy": 24.9,
     "carrefour": 25.9
+   },
+   "promos": {
+    "carrefour": {
+     "price_eff": 21.5,
+     "min_qty": 1.0,
+     "desc": "*נס קפה עלית 200 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -307,7 +495,8 @@
     "shufersal": 7.9,
     "rami_levy": 6.9,
     "carrefour": 7.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "cola",
@@ -318,6 +507,15 @@
     "shufersal": 7.5,
     "rami_levy": 6.5,
     "carrefour": 7.5
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 5.0,
+     "min_qty": 2.0,
+     "desc": "2ב9.40 פקדון קוקה קולה/זירו 1 ליטר-ישיר",
+     "club_only": false,
+     "min_spend": null
+    }
    }
   },
   {
@@ -329,6 +527,29 @@
     "shufersal": 21.5,
     "rami_levy": 16.9,
     "carrefour": 23.9
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 16.0,
+     "min_qty": 2.0,
+     "desc": "2ב31.40 פקדון מיץ תפוזים/גזר 1 ליטר-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 10.9,
+     "min_qty": 1.0,
+     "desc": "פרימור סחוט 1 ליטר ב10.90 כולל",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 16.9,
+     "min_qty": 1.0,
+     "desc": "מיץ פרימור 1 ליטר",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -340,7 +561,8 @@
     "shufersal": 4.0,
     "rami_levy": 2.9,
     "carrefour": 4.1
-   }
+   },
+   "promos": {}
   },
   {
    "id": "beer",
@@ -351,7 +573,8 @@
     "shufersal": 9.5,
     "rami_levy": 7.9,
     "carrefour": 9.5
-   }
+   },
+   "promos": {}
   },
   {
    "id": "bamba",
@@ -362,6 +585,29 @@
     "shufersal": 4.9,
     "rami_levy": 4.0,
     "carrefour": 4.9
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 3.33,
+     "min_qty": 9.0,
+     "desc": "9ב30 חטיפים מלוחים אסם 40-80 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 3.0,
+     "min_qty": 10.0,
+     "desc": "חטיפי אסם עד 80גרם 10ב30",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 3.0,
+     "min_qty": 1.0,
+     "desc": "*במבה קלאסי 80 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -373,6 +619,29 @@
     "shufersal": 4.9,
     "rami_levy": 3.9,
     "carrefour": 4.9
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 3.33,
+     "min_qty": 9.0,
+     "desc": "9ב30 חטיפים מלוחים אסם 40-80 גרם-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 3.0,
+     "min_qty": 10.0,
+     "desc": "חטיפי אסם עד 80גרם 10ב30",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 3.5,
+     "min_qty": 6.0,
+     "desc": "מגוון חטיפים מלוחים אסם 40-80 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -384,7 +653,8 @@
     "shufersal": 16.9,
     "rami_levy": 15.9,
     "carrefour": 16.9
-   }
+   },
+   "promos": {}
   },
   {
    "id": "cornflakes",
@@ -395,6 +665,22 @@
     "shufersal": 20.9,
     "rami_levy": 19.9,
     "carrefour": 21.9
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 17.9,
+     "min_qty": 1.0,
+     "desc": "קורנפלקס תלמה 850 ג 17.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 17.9,
+     "min_qty": 1.0,
+     "desc": "*קורנפלקס תלמה אלופים 850 גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -406,6 +692,22 @@
     "shufersal": 27.9,
     "rami_levy": 24.9,
     "carrefour": 28.5
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 25.9,
+     "min_qty": 1.0,
+     "desc": "25.90 סלמי/פסטרמה בטעמים 320-350 גר-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "carrefour": {
+     "price_eff": 26.9,
+     "min_qty": 1.0,
+     "desc": "פסטרמה ארבעה פלפלים עוף טוב 350גרם",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -417,6 +719,22 @@
     "shufersal": 33.9,
     "rami_levy": 29.9,
     "carrefour": 32.9
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 29.0,
+     "min_qty": 2.0,
+     "desc": "ב. 2ב58 מגוון מוצרי טבעול 400-750 ג-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 27.5,
+     "min_qty": 2.0,
+     "desc": "מוצרי טבעול 2ב55",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -428,6 +746,15 @@
     "shufersal": 50.9,
     "rami_levy": 49.9,
     "carrefour": 50.9
+   },
+   "promos": {
+    "rami_levy": {
+     "price_eff": 42.9,
+     "min_qty": 1.0,
+     "desc": "נייר טואלט תלת שכבתי טאנקס 32ג ב42.90",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -439,7 +766,8 @@
     "shufersal": 16.9,
     "rami_levy": 14.7,
     "carrefour": 16.2
-   }
+   },
+   "promos": {}
   },
   {
    "id": "laundry",
@@ -450,6 +778,29 @@
     "shufersal": 39.9,
     "rami_levy": 28.9,
     "carrefour": 38.9
+   },
+   "promos": {
+    "shufersal": {
+     "price_eff": 30.0,
+     "min_qty": 2.0,
+     "desc": "2ב60 גל כביסה 2.5 ליטר-ישיר",
+     "club_only": false,
+     "min_spend": null
+    },
+    "rami_levy": {
+     "price_eff": 27.5,
+     "min_qty": 2.0,
+     "desc": "פרסיל גל 2.5 לי 2ב55",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "carrefour": {
+     "price_eff": 12.6,
+     "min_qty": 1.0,
+     "desc": "*פרסיל ג ל ירוק 2.5 ליטר",
+     "club_only": false,
+     "min_spend": "0.00"
+    }
    }
   },
   {
@@ -461,7 +812,8 @@
     "shufersal": 12.9,
     "rami_levy": 9.9,
     "carrefour": 11.9
-   }
+   },
+   "promos": {}
   }
  ],
  "totals": {

@@ -57,15 +57,71 @@ async def scrape_chain(chain_key, cfg, workdir):
 
     cls = ScraperFactory.get(cfg["scraper"])
     inst = cls(file_output=DiskFileOutput(storage_path=os.path.join(workdir, chain_key)))
-    async for entry in inst.scrape(limit=1, store_id=cfg["store_id"],
-                                   files_types=[FileTypesFilters.PRICE_FULL_FILE.name]):
-        print(chain_key, "->", entry.file_name, entry.downloaded, entry.error)
+    for ftype in (FileTypesFilters.PRICE_FULL_FILE.name, FileTypesFilters.PROMO_FULL_FILE.name):
+        async for entry in inst.scrape(limit=1, store_id=cfg["store_id"], files_types=[ftype]):
+            print(chain_key, ftype, "->", entry.file_name, entry.downloaded, entry.error)
 
 
-def newest_xml(folder):
-    files = sorted(glob.glob(os.path.join(folder, "**", "*Price*.xml"), recursive=True) +
-                   glob.glob(os.path.join(folder, "*Price*.xml")))
+def newest_xml(folder, kind="Price"):
+    files = sorted(glob.glob(os.path.join(folder, "**", f"*{kind}*.xml"), recursive=True) +
+                   glob.glob(os.path.join(folder, f"*{kind}*.xml")))
     return files[-1] if files else None
+
+
+def parse_promos(path, barcodes, shelf, today):
+    """Best active, non-coupon promo per barcode from a PromoFull file.
+
+    Returns {barcode: {price_eff, min_qty, desc, club_only, min_spend}}.
+    Reward types: 3 = discounted unit price, 10 = bundle (price is total for min_qty),
+    2 = percent discount. Coupons and gifts are excluded.
+    """
+    best = {}
+    if not path:
+        return best
+    for _ev, el in ET.iterparse(path, events=("end",)):
+        if el.tag != "Promotion":
+            continue
+        try:
+            start = dt.datetime.fromisoformat(el.findtext("PromotionStartDateTime")).date()
+            end = dt.datetime.fromisoformat(el.findtext("PromotionEndDateTime")).date()
+        except Exception:
+            el.clear()
+            continue
+        if not (start <= today <= end) or (el.findtext("AdditionalIsCoupon") or "").strip() == "1":
+            el.clear()
+            continue
+        club = (el.findtext("ClubID") or "0").strip()
+        club_only = not club.startswith("0")
+        desc = (el.findtext("PromotionDescription") or "").strip()
+        for g in el.iter("Group"):
+            min_amt = (g.findtext("MinPurchaseAmount") or "").strip()
+            for pi in g.iter("PromotionItem"):
+                bc = (pi.findtext("ItemCode") or "").strip()
+                if bc not in barcodes or bc not in shelf:
+                    continue
+                reward = (pi.findtext("RewardType") or "").strip()
+                try:
+                    min_qty = float(pi.findtext("MinQty") or 1)
+                    price = float(pi.findtext("DiscountedPrice") or 0)
+                    rate = float(pi.findtext("DiscountRate") or 0)
+                except ValueError:
+                    continue
+                shelf_price = shelf[bc][1]
+                eff = None
+                if reward == "3" and 0 < price < shelf_price:
+                    eff = price
+                elif reward == "10" and price > 0 and min_qty > 0:
+                    eff = price / min_qty
+                elif reward == "2" and 0 < rate < 100:
+                    eff = shelf_price * (1 - rate / 100)
+                if eff is None or eff >= shelf_price or eff <= 0:
+                    continue
+                cur = best.get(bc)
+                if cur is None or eff < cur["price_eff"]:
+                    best[bc] = {"price_eff": round(eff, 2), "min_qty": min_qty, "desc": desc,
+                                "club_only": club_only, "min_spend": min_amt or None}
+        el.clear()
+    return best
 
 
 def main():
@@ -78,11 +134,13 @@ def main():
 
     if args.offline_dir:
         xml_paths = {k: newest_xml(os.path.join(args.offline_dir, k)) for k in CHAINS}
+        promo_paths = {k: newest_xml(os.path.join(args.offline_dir, k), "Promo") for k in CHAINS}
     else:
         os.makedirs(workdir, exist_ok=True)
         for k, cfg in CHAINS.items():
             asyncio.run(scrape_chain(k, cfg, workdir))
         xml_paths = {k: newest_xml(os.path.join(workdir, k)) for k in CHAINS}
+        promo_paths = {k: newest_xml(os.path.join(workdir, k), "Promo") for k in CHAINS}
 
     missing = [k for k, p in xml_paths.items() if not p]
     if missing:
@@ -91,6 +149,10 @@ def main():
 
     basket = json.load(open(BASKET_PATH))
     chain_items = {k: load_xml(p) for k, p in xml_paths.items()}
+    today_d = dt.date.today()
+    barcodes = {it["barcode"] for it in basket["items"]}
+    chain_promos = {k: parse_promos(promo_paths.get(k), barcodes, chain_items[k], today_d) for k in CHAINS}
+    print("promos found:", {k: len(v) for k, v in chain_promos.items()})
 
     snapshot_items, totals = [], {k: 0.0 for k in CHAINS}
     for it in basket["items"]:
@@ -99,8 +161,9 @@ def main():
         if len(prices) < 2:
             print(f"skip {it['id']}: found in {list(prices)} only")
             continue
+        promos = {k: chain_promos[k][bc] for k in CHAINS if bc in chain_promos[k]}
         snapshot_items.append({"id": it["id"], "name_he": it["name_he"], "category": it["category"],
-                               "barcode": bc, "prices": prices})
+                               "barcode": bc, "prices": prices, "promos": promos})
         for k, p in prices.items():
             totals[k] += p
 

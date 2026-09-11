@@ -7,12 +7,16 @@
 <meta name="description" content="מדד מחירי סל המכולת ברשתות הגדולות בישראל, מדי יום, על בסיס נתוני חוק שקיפות המחירים. בונים סל אישי ומשווים.">
 <meta property="og:title" content="כמה התייקרה המכולת שלך?">
 <meta property="og:description" content="סל מכולת זהה בשופרסל, רמי לוי ו-Carrefour - מי יקר וכמה התייקר?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 </head>
 <body>
 <header class="hero">
   <h1>כמה התייקרה המכולת שלך? 🛒</h1>
+  <div class="kicker">מדד מחירי סופר ישראל · מתעדכן מדי יום</div>
   <p class="sub">סל זהה של 42 מוצרי יסוד, מחירים אמיתיים מהיום, מתוך קובצי חוק שקיפות המחירים</p>
   <div class="totals" id="totals"></div>
   <p class="updated" id="updated"></p>
@@ -27,7 +31,7 @@
 
   <section class="card">
     <h2>המחשבון: בנו את הסל שלכם</h2>
-    <p class="hint">סמנו כמויות ותראו כמה הסל שלכם עולה בכל רשת - וכמה הוא התייקר מאז תחילת המדידה.</p>
+    <p class="hint">סמנו כמויות ותראו כמה הסל שלכם עולה בכל רשת - כולל מבצעים פעילים (מחיר מדף בקו מחוק כשיש מבצע זול יותר).</p>
     <div id="calcControls" class="calc-controls">
       <button id="selectAll">סל מלא</button>
       <button id="selectNone">נקה הכל</button>
@@ -38,7 +42,7 @@
 </main>
 
 <footer>
-  <p>הנתונים: קובצי המחירים הרשמיים שרשתות השיווק מפרסמות מכוח <b>חוק שקיפות המחירים</b>. ההשוואה על מוצרים זהים (אותו ברקוד) בסניפי האונליין של הרשתות.</p>
+  <p>הנתונים: קובצי המחירים והמבצעים הרשמיים שרשתות השיווק מפרסמות מכוח <b>חוק שקיפות המחירים</b>. ההשוואה על מוצרים זהים (אותו ברקוד). המבצעים המוצגים אינם דורשים קופון; מבצעי מועדון מסומנים במפורש.</p>
   <p>נבנה על ידי <b>ויקטוריה אפללו</b> · קוד פתוח</p>
 </footer>
 <script src="app.js"></script>
