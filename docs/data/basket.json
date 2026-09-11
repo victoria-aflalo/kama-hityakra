@@ -6,294 +6,590 @@
    "name_he": "חלב 3% בקרטון 1 ליטר",
    "category": "חלב",
    "barcode": "7290004131074",
-   "matched_name": "חלב בקרטון 3% שומן 1 ל"
+   "matched_name": "חלב בקרטון 3% שומן 1 ל",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "openfoodfacts",
+   "off_name": "חלב טרי 3%",
+   "gi": 32,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "cottage",
    "name_he": "קוטג׳ 5% 250 גרם",
    "category": "חלב",
    "barcode": "7290011194246",
-   "matched_name": "קוטג 5% 250ג שטראוס"
+   "matched_name": "קוטג 5% 250ג שטראוס",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Strauss Ski and Cottage",
+   "gi": 30,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "yellow_cheese",
    "name_he": "גבינה צהובה 22% 400 גרם",
    "category": "חלב",
    "barcode": "7290014760448",
-   "matched_name": "גבינה צהובה 22% 400 גרם"
+   "matched_name": "גבינה צהובה 22% 400 גרם",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Cheese (גלבוע 22%)",
+   "gi": 5,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "white_cheese",
    "name_he": "גבינה לבנה 5% 250 גרם",
    "category": "חלב",
    "barcode": "7290000474502",
-   "matched_name": "גבינה לבנה 5% שומן 250 ג"
+   "matched_name": "גבינה לבנה 5% שומן 250 ג",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "גבינה לבנה 5%",
+   "gi": 30,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "mozzarella",
    "name_he": "מוצרלה 200 גרם",
    "category": "חלב",
    "barcode": "7290102397747",
-   "matched_name": "מוצרלה נעם 200 גרם"
+   "matched_name": "מוצרלה נעם 200 גרם",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "מוצרלה",
+   "gi": 5,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "cream_cheese",
    "name_he": "גבינת שמנת 200 גרם",
    "category": "חלב",
    "barcode": "7290019635369",
-   "matched_name": "גבינת שמנת 16% 200 גרם"
+   "matched_name": "גבינת שמנת 16% 200 גרם",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Cream Cheese 16%",
+   "gi": 10,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "yogurt",
    "name_he": "יוגורט תות 200 גרם",
    "category": "חלב",
    "barcode": "7290116936208",
-   "matched_name": "יוגורטGOתנובה תות1% 200"
+   "matched_name": "יוגורטGOתנובה תות1% 200",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Protein Yoghurt Strawberry Cream",
+   "gi": 38,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "butter",
    "name_he": "חמאה 200 גרם",
    "category": "חלב",
    "barcode": "7290116932033",
-   "matched_name": "חמאה מהדרין 200ג תנובה"
+   "matched_name": "חמאה מהדרין 200ג תנובה",
+   "allergens": [
+    "חלב"
+   ],
+   "allergen_source": "manual",
+   "off_name": "חמאה",
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "soy_milk",
    "name_he": "משקה סויה 1 ליטר",
    "category": "חלב",
    "barcode": "7290004132552",
-   "matched_name": "משקה סויה לייט 1ל"
+   "matched_name": "משקה סויה לייט 1ל",
+   "allergens": [
+    "סויה"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Soy milk",
+   "gi": 35,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "eggs",
    "name_he": "ביצים L ארוזות 18 יח׳",
    "category": "לחם וביצים",
    "barcode": "7290001201602",
-   "matched_name": "ביצים ארוזות 18יח L"
+   "matched_name": "ביצים ארוזות 18יח L",
+   "allergens": [
+    "ביצים"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "bread",
    "name_he": "לחם אחיד פרוס 900 גרם",
    "category": "לחם וביצים",
    "barcode": "7290018500361",
-   "matched_name": "לחם אחיד פרוס 900 גרם"
+   "matched_name": "לחם אחיד פרוס 900 גרם",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": "לחם אחיד פרוס",
+   "gi": 72,
+   "gi_band": "גבוה",
+   "gi_estimated": true
   },
   {
    "id": "flour",
    "name_he": "קמח תופח 1 ק״ג",
    "category": "מזווה",
    "barcode": "7290100702383",
-   "matched_name": "קמח תופח 1 ק\"ג סוגת"
+   "matched_name": "קמח תופח 1 ק\"ג סוגת",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": "Self Rising Flour",
+   "gi": 70,
+   "gi_band": "גבוה",
+   "gi_estimated": true
   },
   {
    "id": "sugar",
    "name_he": "סוכר לבן 1 ק״ג",
    "category": "מזווה",
    "barcode": "7290003643387",
-   "matched_name": "סוכר לבן צנצנת 1ק סוגת"
+   "matched_name": "סוכר לבן צנצנת 1ק סוגת",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": "סוכר לבן",
+   "gi": 65,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "rice",
    "name_he": "אורז בסמטי 1 ק״ג",
    "category": "מזווה",
    "barcode": "7290113196414",
-   "matched_name": "אורז בסמטי 1 ק\"ג"
+   "matched_name": "אורז בסמטי 1 ק\"ג",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 55,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "pasta",
    "name_he": "ספגטי 500 גרם",
    "category": "מזווה",
    "barcode": "8008912010034",
-   "matched_name": "ספגטי 500 גרם"
+   "matched_name": "ספגטי 500 גרם",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 48,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "ptitim",
    "name_he": "פתיתים 500 גרם",
    "category": "מזווה",
    "barcode": "7290000060408",
-   "matched_name": "פתיתים טבעות 500 גרם"
+   "matched_name": "פתיתים טבעות 500 גרם",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 60,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "canola",
    "name_he": "שמן קנולה 1 ליטר",
    "category": "מזווה",
    "barcode": "7290000144474",
-   "matched_name": "שמן קנולה+נוגדי חימצון1ל"
+   "matched_name": "שמן קנולה+נוגדי חימצון1ל",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": "Canola Oil",
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "olive_oil",
    "name_he": "שמן זית 500 מ״ל",
    "category": "מזווה",
    "barcode": "7290006374684",
-   "matched_name": "שמן זית קלאסי 500 מ\"ל"
+   "matched_name": "שמן זית קלאסי 500 מ\"ל",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "tahini",
    "name_he": "טחינה 500 גרם",
    "category": "מזווה",
    "barcode": "7290001216231",
-   "matched_name": "טחינה מלאה 500ג אל ארז"
+   "matched_name": "טחינה מלאה 500ג אל ארז",
+   "allergens": [
+    "שומשום"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 15,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "hummus",
    "name_he": "חומוס 400 גרם",
    "category": "מזווה",
    "barcode": "7290106576513",
-   "matched_name": "חומוס מסעדה 400 גרם"
+   "matched_name": "חומוס מסעדה 400 גרם",
+   "allergens": [
+    "שומשום"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 28,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "tuna",
    "name_he": "טונה בשמן 3×80 גרם",
    "category": "מזווה",
    "barcode": "7290016096507",
-   "matched_name": "טונה בשמן קנולה3*80 גרם"
+   "matched_name": "טונה בשמן קנולה3*80 גרם",
+   "allergens": [
+    "דגים"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "ketchup",
    "name_he": "קטשופ 750 גרם",
    "category": "מזווה",
    "barcode": "7290000072630",
-   "matched_name": "קטשופ חריף 750 גרם"
+   "matched_name": "קטשופ חריף 750 גרם",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": "קטשופ חריף",
+   "gi": 55,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "mayo",
    "name_he": "מיונז 500 גרם",
    "category": "מזווה",
    "barcode": "7290000111186",
-   "matched_name": "מיונז אמיתי תלמה 500 גרם"
+   "matched_name": "מיונז אמיתי תלמה 500 גרם",
+   "allergens": [
+    "ביצים"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "salt",
    "name_he": "מלח ים דק 250 גרם",
    "category": "מזווה",
    "barcode": "7290000523125",
-   "matched_name": "מלח ים דק250ג מלח הארץ"
+   "matched_name": "מלח ים דק250ג מלח הארץ",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "peanut_butter",
    "name_he": "חמאת בוטנים 510 גרם",
    "category": "מזווה",
    "barcode": "7290019297536",
-   "matched_name": "חמאת בוטנים 510 גרם"
+   "matched_name": "חמאת בוטנים 510 גרם",
+   "allergens": [
+    "בוטנים"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 22,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "jam",
    "name_he": "ריבת תות 250 גרם",
    "category": "מזווה",
    "barcode": "7290112197573",
-   "matched_name": "טרו ריבת תות 250 גרם"
+   "matched_name": "טרו ריבת תות 250 גרם",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 65,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "coffee",
    "name_he": "קפה נמס 200 גרם",
    "category": "שתייה",
    "barcode": "7290000176420",
-   "matched_name": "קפה נמס 200 גרם עלית"
+   "matched_name": "קפה נמס 200 גרם עלית",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": "קפה נמס",
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "tea",
    "name_he": "תה ויסוצקי 25 שקיקים",
    "category": "שתייה",
    "barcode": "7290000345260",
-   "matched_name": "תה ויסוצקי 25שק*1.5גרם"
+   "matched_name": "תה ויסוצקי 25שק*1.5גרם",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "cola",
    "name_he": "קוקה קולה 1 ליטר",
    "category": "שתייה",
    "barcode": "7290013585394",
-   "matched_name": "קוקה קולה 1 ליטר"
+   "matched_name": "קוקה קולה 1 ליטר",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 63,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "orange_juice",
    "name_he": "מיץ תפוזים 1 ליטר",
    "category": "שתייה",
    "barcode": "7290018925867",
-   "matched_name": "מיץ תפוזים וגזר 1 ליטר"
+   "matched_name": "מיץ תפוזים וגזר 1 ליטר",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 50,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "water",
    "name_he": "מים מינרלים 1 ליטר",
    "category": "שתייה",
    "barcode": "7290002331490",
-   "matched_name": "נביעות מים מינרלים 1 ל"
+   "matched_name": "נביעות מים מינרלים 1 ל",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "beer",
    "name_he": "בירה קרלסברג 500 מ״ל",
    "category": "שתייה",
    "barcode": "7290002871361",
-   "matched_name": "בירה קרלסברג בק.חוזר500מ"
+   "matched_name": "בירה קרלסברג בק.חוזר500מ",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 66,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "bamba",
    "name_he": "במבה 80 גרם",
    "category": "חטיפים",
    "barcode": "7290000066318",
-   "matched_name": "במבה 80 גרם אסם"
+   "matched_name": "במבה 80 גרם אסם",
+   "allergens": [
+    "בוטנים"
+   ],
+   "allergen_source": "openfoodfacts",
+   "off_name": "במבה",
+   "gi": 60,
+   "gi_band": "בינוני",
+   "gi_estimated": true
   },
   {
    "id": "bisli",
    "name_he": "ביסלי בצל 70 גרם",
    "category": "חטיפים",
    "barcode": "7290115201741",
-   "matched_name": "ביסלי בצל 70 גרם"
+   "matched_name": "ביסלי בצל 70 גרם",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 70,
+   "gi_band": "גבוה",
+   "gi_estimated": true
   },
   {
    "id": "chocolate",
    "name_he": "שוקולד מריר 100 גרם",
    "category": "חטיפים",
    "barcode": "7290119500437",
-   "matched_name": "טוסו שוקולד מריר 100גרם"
+   "matched_name": "טוסו שוקולד מריר 100גרם",
+   "allergens": [
+    "חלב",
+    "סויה",
+    "אגוזים"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 35,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "cornflakes",
    "name_he": "קורנפלקס 850 גרם",
    "category": "חטיפים",
    "barcode": "7290112494351",
-   "matched_name": "קורנפלקס אלופים בדץ 850ג"
+   "matched_name": "קורנפלקס אלופים בדץ 850ג",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 81,
+   "gi_band": "גבוה",
+   "gi_estimated": true
   },
   {
    "id": "pastrama",
    "name_he": "פסטרמה 350 גרם",
    "category": "קפואים ונקניקים",
    "barcode": "7290019204008",
-   "matched_name": "פסטרמה 4 פלפלים 350ג"
+   "matched_name": "פסטרמה 4 פלפלים 350ג",
+   "allergens": [],
+   "allergen_source": "manual",
+   "off_name": null,
+   "gi": 0,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "shnitzel",
    "name_he": "שניצל תירס 750 גרם",
    "category": "קפואים ונקניקים",
    "barcode": "7290000300900",
-   "matched_name": "שניצל תירס 750 גרם"
+   "matched_name": "שניצל תירס 750 גרם",
+   "allergens": [
+    "גלוטן"
+   ],
+   "allergen_source": "manual",
+   "off_name": "שניצל תירס",
+   "gi": 55,
+   "gi_band": "נמוך",
+   "gi_estimated": true
   },
   {
    "id": "toilet_paper",
    "name_he": "נייר טואלט 32 גלילים",
    "category": "לבית",
    "barcode": "7290103705602",
-   "matched_name": "נייר טואלט 3שכבות32גTNX"
+   "matched_name": "נייר טואלט 3שכבות32גTNX",
+   "non_food": true,
+   "allergens": [],
+   "allergen_source": null,
+   "gi": null
   },
   {
    "id": "dish_soap",
    "name_he": "נוזל כלים 1 ליטר",
    "category": "לבית",
    "barcode": "7290001246979",
-   "matched_name": "נוזל כלים לימון 1 ליטר"
+   "matched_name": "נוזל כלים לימון 1 ליטר",
+   "non_food": true,
+   "allergens": [],
+   "allergen_source": null,
+   "gi": null
   },
   {
    "id": "laundry",
    "name_he": "גל כביסה 2.5 ליטר",
    "category": "לבית",
    "barcode": "7290016509786",
-   "matched_name": "גל כביסה פרסיל 2.5 ליטר"
+   "matched_name": "גל כביסה פרסיל 2.5 ליטר",
+   "non_food": true,
+   "allergens": [],
+   "allergen_source": null,
+   "gi": null
   },
   {
    "id": "baking_paper",
    "name_he": "נייר אפייה 50 יח׳",
    "category": "לבית",
    "barcode": "7290000195216",
-   "matched_name": "נייר אפייה 50יח ניקול"
+   "matched_name": "נייר אפייה 50יח ניקול",
+   "non_food": true,
+   "allergens": [],
+   "allergen_source": null,
+   "gi": null
   }
  ]
 }

@@ -55,3 +55,16 @@ footer b { color: var(--text); }
 /* Chart.js RTL headless overflow guard */
 html, body { overflow-x: hidden; }
 .chart-wrap canvas { max-width: 100% !important; }
+/* receipt scan */
+.receipt-card { text-align: center; }
+.receipt-btn { background: var(--accent); color: #fff; border: 0; border-radius: .7rem; padding: .7rem 1.6rem; font-size: 1rem; font-weight: 600; font-family: inherit; cursor: pointer; }
+.receipt-btn:hover { filter: brightness(1.08); }
+.receipt-status { margin-top: .8rem; font-size: .85rem; color: var(--muted); min-height: 1.2rem; }
+.receipt-status .ok { color: var(--accent); font-weight: 600; }
+.receipt-status .warn { color: var(--promo-text); }
+/* item meta: GI + allergens */
+.meta { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: .3rem; padding-bottom: .15rem; }
+.meta-chip { font-size: .7rem; border-radius: .5rem; padding: .02rem .45rem; border: 1px solid var(--line); color: var(--muted); background: #fafbfc; }
+.meta-chip.gi-low { color: var(--accent); border-color: #bfe3dc; background: #eef8f5; }
+.meta-chip.gi-mid { color: #9a7b12; border-color: #eed88f; background: #fff8e6; }
+.meta-chip.gi-high { color: #b0483e; border-color: #efc5bf; background: #fdf0ee; }
