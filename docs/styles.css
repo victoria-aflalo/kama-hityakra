@@ -68,3 +68,4 @@ html, body { overflow-x: hidden; }
 .meta-chip.gi-low { color: var(--accent); border-color: #bfe3dc; background: #eef8f5; }
 .meta-chip.gi-mid { color: #9a7b12; border-color: #eed88f; background: #fff8e6; }
 .meta-chip.gi-high { color: #b0483e; border-color: #efc5bf; background: #fdf0ee; }
+.total-chip .cov { font-size: .72rem; color: var(--muted); margin-top: .15rem; }
