@@ -117,6 +117,20 @@
      "desc": "גבינה שמנת ניו יורק גד 200 גר",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "osher_ad": {
+     "price_eff": 12.5,
+     "min_qty": 2.0,
+     "desc": "גבינת שמנת   מחלבת גד  2 ב 25",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "tiv_taam": {
+     "price_eff": 14.95,
+     "min_qty": 2.0,
+     "desc": "גבינה 2 ב 29.9",
+     "club_only": false,
+     "min_spend": null
     }
    }
   },
@@ -278,6 +292,13 @@
      "desc": "אורז בסמטי 1 ק ג שקדיה/אלפנט ב9.90",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "tiv_taam": {
+     "price_eff": 11.9,
+     "min_qty": 1.0,
+     "desc": "אורז ב 11.90",
+     "club_only": false,
+     "min_spend": null
     }
    }
   },
@@ -436,6 +457,13 @@
      "desc": "שלישיית פילטונה קנולה/שמן צמחי",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "tiv_taam": {
+     "price_eff": 11.9,
+     "min_qty": 1.0,
+     "desc": "שלישיית טונה ב 11.90",
+     "club_only": false,
+     "min_spend": null
     }
    }
   },
@@ -683,6 +711,20 @@
      "desc": "*במבה קלאסי 80 גרם",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "osher_ad": {
+     "price_eff": 3.0,
+     "min_qty": 10.0,
+     "desc": "מגוון חטיפים  אסם  10 ב 30",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "tiv_taam": {
+     "price_eff": 4.63,
+     "min_qty": 3.0,
+     "desc": "חטיף 3 ב 13.9",
+     "club_only": false,
+     "min_spend": null
     }
    }
   },
@@ -720,6 +762,20 @@
      "desc": "מגוון חטיפים מלוחים אסם 40-80 גרם",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "osher_ad": {
+     "price_eff": 3.0,
+     "min_qty": 10.0,
+     "desc": "מגוון חטיפים  אסם  10 ב 30",
+     "club_only": false,
+     "min_spend": "0.00"
+    },
+    "tiv_taam": {
+     "price_eff": 4.63,
+     "min_qty": 3.0,
+     "desc": "חטיף 3 ב 13.9",
+     "club_only": false,
+     "min_spend": null
     }
    }
   },
@@ -821,6 +877,13 @@
      "desc": "מוצרי טבעול 2ב55",
      "club_only": false,
      "min_spend": "0.00"
+    },
+    "osher_ad": {
+     "price_eff": 27.5,
+     "min_qty": 2.0,
+     "desc": "מגוון צמחי  טבעול   2 ב 55",
+     "club_only": false,
+     "min_spend": "0.00"
     }
    }
   },
@@ -856,7 +919,15 @@
     "carrefour": 16.2,
     "tiv_taam": 18.5
    },
-   "promos": {}
+   "promos": {
+    "tiv_taam": {
+     "price_eff": 9.25,
+     "min_qty": 1.0,
+     "desc": "אקופרינד השני ב 50%",
+     "club_only": false,
+     "min_spend": null
+    }
+   }
   },
   {
    "id": "laundry",
